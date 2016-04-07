@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:id="@+id/htab_maincontent"
+    android:fitsSystemWindows="true"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.design.widget.AppBarLayout
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:id="@+id/htab_appbar"
+        android:background="?colorPrimary"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+
+        android:layout_height="wrap_content">
+        <android.support.design.widget.CollapsingToolbarLayout
+            android:id="@+id/htab_collapse_toolbar"
+            android:fitsSystemWindows="true"
+            android:layout_width="fill_parent"
+            android:layout_height="256.0dip"
+            app:layout_scrollFlags="enterAlways|scroll|snap"
+            app:contentScrim="?colorPrimary">
+
+            <ImageView
+                android:id="@+id/htab_header"
+                android:background="@drawable/kitten_2_inverse"
+                android:fitsSystemWindows="true"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:alpha="0.5"
+                app:layout_collapseMode="parallax" />
+
+            <android.support.v7.widget.Toolbar
+                android:gravity="top"
+                android:id="@+id/htab_toolbar"
+                android:layout_width="fill_parent"
+                android:layout_height="104.0dip"
+                android:minHeight="?actionBarSize"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                app:layout_collapseMode="pin"
+                app:titleMarginTop="13.0dip" />?attr/actionBarSize parallax
+
+            <android.support.design.widget.TabLayout
+                android:layout_gravity="bottom"
+                android:id="@+id/htab_tabs"
+                android:layout_width="fill_parent"
+                android:layout_height="?actionBarSize"
+                app:tabIndicatorColor="@android:color/white" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/htab_viewpager"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" />
+</android.support.design.widget.CoordinatorLayout>

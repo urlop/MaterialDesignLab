@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/app_bar" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="@dimen/app_bar_height">
+        <android.support.design.widget.CollapsingToolbarLayout android:id="@+id/toolbar_layout" android:fitsSystemWindows="true" android:layout_width="fill_parent" android:layout_height="fill_parent" app:layout_scrollFlags="exitUntilCollapsed|scroll" app:contentScrim="?colorPrimary">enterAlwaysCollapsed
+            <ImageView android:layout_width="fill_parent" android:layout_height="fill_parent" android:src="@drawable/kitten_2_inverse" android:scaleType="centerCrop" android:alpha="0.5" />
+            <android.support.v7.widget.Toolbar android:theme="@style/AppTheme.AppBarOverlay" android:id="@+id/toolbar" android:layout_width="fill_parent" android:layout_height="?actionBarSize" app:popupTheme="@style/AppTheme.PopupOverlay" app:layout_collapseMode="pin" />
+        </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+    <include layout="@layout/content_list" />
+    <android.support.design.widget.FloatingActionButton android:id="@+id/fab" android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_margin="@dimen/fab_margin" android:src="@drawable/ic_add_white_24dp" app:layout_anchor="@+id/app_bar" app:layout_anchorGravity="end|bottom|center" />
+</android.support.design.widget.CoordinatorLayout>
