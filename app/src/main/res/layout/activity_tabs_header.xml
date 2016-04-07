@@ -13,14 +13,14 @@
         android:background="?colorPrimary"
         android:fitsSystemWindows="true"
         android:layout_width="fill_parent"
-
         android:layout_height="wrap_content">
+
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/htab_collapse_toolbar"
             android:fitsSystemWindows="true"
             android:layout_width="fill_parent"
             android:layout_height="256.0dip"
-            app:layout_scrollFlags="enterAlways|scroll|snap"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
             app:contentScrim="?colorPrimary">
 
             <ImageView
