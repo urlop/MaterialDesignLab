@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/xsmall_margin"
+        android:layout_marginBottom="@dimen/xsmall_margin"
+        android:layout_marginLeft="@dimen/small_margin"
+        android:layout_marginRight="@dimen/small_margin"
+        android:foreground="?attr/selectableItemBackground"
+        card_view:cardCornerRadius="2dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:transitionName="image"
+                android:id="@+id/iv_image"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/kitten_2" />
+            <TextView
+                android:transitionName="title"
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/card_image"
+                android:layout_marginStart="@dimen/xsmall_margin"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
+                android:text="Gatitoo!!"/>
+
+            <Button
+                android:id="@+id/action_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_image"
+                style="@style/ButtonMain.Borderless"
+                android:text="Action" />
+
+            <ImageButton
+                android:id="@+id/share_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="@dimen/xsmall_margin"
+                android:src="@drawable/ic_notifications_black_24dp"
+                android:layout_below="@+id/iv_image"
+                android:layout_alignParentEnd="true"
+                style="?android:attr/borderlessButtonStyle"
+                android:tint="@color/grey" />
+
+            <ImageButton
+                android:id="@+id/favorite_button"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_marginEnd="@dimen/xsmall_margin"
+                android:src="@drawable/ic_notifications_black_24dp"
+                android:layout_below="@+id/iv_image"
+                android:layout_toStartOf="@id/share_button"
+                style="?android:attr/borderlessButtonStyle"
+                android:tint="@color/grey" />
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>
