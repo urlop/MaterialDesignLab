@@ -13,6 +13,7 @@ import android.widget.TextView;
 
 import com.example.ruby.materiallab.R;
 import com.example.ruby.materiallab.ui.ItemDetailActivity;
+import com.example.ruby.materiallab.ui.MainActivity;
 
 public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
 
@@ -53,14 +54,15 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
         @Override
         public void onClick(View v) {
-            Intent intent = new Intent(context, ItemDetailActivity.class);
+            //Intent intent = new Intent(context, ItemDetailActivity.class);
             /*Pair<View, String> p1 = Pair.create((View)iv_image, "image");
             Pair<View, String> p2 = Pair.create((View)tv_title, "title");
             ActivityOptionsCompat options = ActivityOptionsCompat.
                     makeSceneTransitionAnimation((Activity) context, p1, p2);*/
-            ActivityOptionsCompat options = ActivityOptionsCompat.
+            /*ActivityOptionsCompat options = ActivityOptionsCompat.
                     makeSceneTransitionAnimation((Activity) context, iv_image, "image");
-            context.startActivity(intent, options.toBundle());
+            context.startActivity(intent, options.toBundle());*/
+            ((MainActivity)context).goToDetail(iv_image);
         }
     }
 }
