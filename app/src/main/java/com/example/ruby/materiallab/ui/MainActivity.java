@@ -45,6 +45,7 @@ import com.example.ruby.materiallab.utils.DetailsTransition;
  * Animations and Animator
  *
  * Icons found in: https://design.google.com/icons/
+ * Animated Vector Drawables: https://github.com/udacity/ud862-samples/blob/master/TickCross/app/src/main/java/com/example/android/tickcross/MainActivity.java
  * http://inthecheesefactory.com/blog/android-design-support-library-codelab/en
  */
 public class MainActivity extends AppCompatActivity implements MainFragment.OnFragmentInteractionListener{
