@@ -1,13 +1,9 @@
 package com.example.ruby.materiallab.ui;
 
-import android.animation.AnimatorInflater;
-import android.animation.AnimatorSet;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
-import android.support.design.widget.TabLayout;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
@@ -20,10 +16,6 @@ import android.view.animation.AnimationUtils;
 
 import com.example.ruby.materiallab.R;
 import com.example.ruby.materiallab.ui.adapters.ContentAdapter;
-import com.example.ruby.materiallab.ui.adapters.ViewPagerAdapter;
-import com.example.ruby.materiallab.ui.fragments.OneFragment;
-import com.example.ruby.materiallab.ui.fragments.ThreeFragment;
-import com.example.ruby.materiallab.ui.fragments.TwoFragment;
 
 /**
  * Principal Activity.
@@ -31,7 +23,8 @@ import com.example.ruby.materiallab.ui.fragments.TwoFragment;
  * Animations and Animator
  *
  * Icons found in: https://design.google.com/icons/
- * http://inthecheesefactory.com/blog/android-design-support-library-codelab/en
+ * Animated Vector Drawables example found in: https://github.com/udacity/ud862-samples/blob/master/TickCross/app/src/main/java/com/example/android/tickcross/MainActivity.java
+ * Based on: http://inthecheesefactory.com/blog/android-design-support-library-codelab/en
  */
 public class MainActivity extends AppCompatActivity {
 

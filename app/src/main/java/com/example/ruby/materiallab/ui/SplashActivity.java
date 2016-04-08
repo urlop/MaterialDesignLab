@@ -47,7 +47,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     public void btnGoNext() {
-        startActivity(new Intent(this, TabsHeaderActivity.class));//LoginActivity //MainActivity //TabsHeaderActivity
+        startActivity(new Intent(this, MainActivity.class));//LoginActivity //MainActivity //TabsHeaderActivity
         finish();
     }
 }
