@@ -10,13 +10,10 @@ import com.example.ruby.materiallab.R;
 
 import java.util.List;
 
-/**
- * Created by Suleiman on 14-04-2015.
- */
-public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAdapter.VersionViewHolder> {
+public class TabContentAdapter extends RecyclerView.Adapter<TabContentAdapter.VersionViewHolder> {
     List<String> items;
 
-    public SimpleRecyclerAdapter(List<String> items) {
+    public TabContentAdapter(List<String> items) {
         this.items = items;
     }
 
@@ -28,7 +25,7 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
 
     @Override
     public void onBindViewHolder(VersionViewHolder versionViewHolder, int i) {
-        versionViewHolder.title.setText(items.get(i));
+        versionViewHolder.tv_title.setText(items.get(i));
     }
 
     @Override
@@ -38,11 +35,11 @@ public class SimpleRecyclerAdapter extends RecyclerView.Adapter<SimpleRecyclerAd
 
 
     class VersionViewHolder extends RecyclerView.ViewHolder{
-        public TextView title;
+        public TextView tv_title;
 
         public VersionViewHolder(View itemView) {
             super(itemView);
-            title = (TextView) itemView.findViewById(R.id.listitem_name);
+            tv_title = (TextView) itemView.findViewById(R.id.tv_title);
         }
     }
 }
