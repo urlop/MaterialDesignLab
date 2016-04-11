@@ -3,6 +3,7 @@ package com.example.ruby.materiallab.ui.adapters;
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
+import android.os.Build;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,7 +16,7 @@ import com.example.ruby.materiallab.R;
 import com.example.ruby.materiallab.ui.ItemDetailActivity;
 import com.example.ruby.materiallab.ui.MainActivity;
 
-public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
+public class ContentAdapter extends RecyclerView.Adapter<ContentAdapter.MyViewHolder> {
 
     private static final int LENGTH = 7;
     private final Context context;
@@ -25,14 +26,17 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
     }
 
     @Override
-    public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
+    public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.item_cardview, parent, false);
-        return new ViewHolder(view);
+        return new MyViewHolder(view);
     }
 
     @Override
-    public void onBindViewHolder(RecyclerView.ViewHolder holder, int position) {
+    public void onBindViewHolder(MyViewHolder holder, int position) {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            holder.iv_image.setTransitionName("trans_image" + position);
+        }
     }
 
     @Override
@@ -40,12 +44,12 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
         return LENGTH;
     }
 
-    public class ViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    public class MyViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
 
-        final ImageView iv_image;
-        final TextView tv_title;
+        public ImageView iv_image;
+        public TextView tv_title;
 
-        public ViewHolder(View itemView) {
+        public MyViewHolder(View itemView) {
             super(itemView);
             iv_image = (ImageView) itemView.findViewById(R.id.iv_image);
             tv_title = (TextView) itemView.findViewById(R.id.tv_title);

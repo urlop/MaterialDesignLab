@@ -11,6 +11,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 
 import com.example.ruby.materiallab.R;
+import com.example.ruby.materiallab.ui.fragments.shared_elements.FragmentActivity;
 
 /**
  * Splash View
@@ -47,7 +48,7 @@ public class SplashActivity extends AppCompatActivity {
     }
 
     public void btnGoNext() {
-        startActivity(new Intent(this, MainActivity.class));//LoginActivity //MainActivity //TabsHeaderActivity
+        startActivity(new Intent(this, MainActivity.class));//LoginActivity //MainActivity //TabsHeaderActivity //FragmentActivity
         finish();
     }
 }

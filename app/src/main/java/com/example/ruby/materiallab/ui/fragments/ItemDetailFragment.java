@@ -54,6 +54,17 @@ public class ItemDetailFragment extends Fragment {
         v_background = v.findViewById(R.id.v_background);
         drawable = (TransitionDrawable) card_image.getDrawable();
 
+        String transitionName = "";
+
+        Bundle bundle = getArguments();
+        if (bundle != null) {
+            transitionName = bundle.getString("TRANS_NAME");
+        }
+
+        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            card_image.setTransitionName(transitionName);
+        }
+
         if (REVEAL_ANIMATION) {
             doReveal();
         }

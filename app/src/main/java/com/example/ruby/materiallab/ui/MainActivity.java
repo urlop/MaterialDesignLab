@@ -4,6 +4,7 @@ import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.app.FragmentTransaction;
 import android.content.Intent;
+import android.graphics.drawable.BitmapDrawable;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -12,6 +13,7 @@ import android.support.design.widget.NavigationView;
 import android.support.design.widget.Snackbar;
 import android.support.design.widget.TabLayout;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -30,14 +32,9 @@ import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.example.ruby.materiallab.R;
-import com.example.ruby.materiallab.ui.adapters.ContentAdapter;
 import com.example.ruby.materiallab.ui.adapters.ViewPagerAdapter;
 import com.example.ruby.materiallab.ui.fragments.ItemDetailFragment;
 import com.example.ruby.materiallab.ui.fragments.MainFragment;
-import com.example.ruby.materiallab.ui.fragments.OneFragment;
-import com.example.ruby.materiallab.ui.fragments.ThreeFragment;
-import com.example.ruby.materiallab.ui.fragments.TwoFragment;
-import com.example.ruby.materiallab.utils.DetailsTransition;
 
 /**
  * Principal Activity.
@@ -48,7 +45,7 @@ import com.example.ruby.materiallab.utils.DetailsTransition;
  * Animated Vector Drawables: https://github.com/udacity/ud862-samples/blob/master/TickCross/app/src/main/java/com/example/android/tickcross/MainActivity.java
  * http://inthecheesefactory.com/blog/android-design-support-library-codelab/en
  */
-public class MainActivity extends AppCompatActivity implements MainFragment.OnFragmentInteractionListener{
+public class MainActivity extends AppCompatActivity{
 
     FloatingActionButton fab;
 
@@ -130,35 +127,35 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
 
     private void setupFragment(){
         getSupportFragmentManager().beginTransaction()
-                .add(R.id.fl_container, new MainFragment()) //replace / remove
+                .replace(R.id.fl_container, new MainFragment()) //replace / remove
                 .commit();
     }
 
     public void goToDetail(View sharedView){
+        ItemDetailFragment itemDetailFragment = new ItemDetailFragment();
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
             MainFragment.getInstance().setSharedElementReturnTransition(TransitionInflater.from(this).inflateTransition(R.transition.change_image_transform));
-            MainFragment.getInstance().setEnterTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.fade));
-
-            // Create new fragment to add (Fragment B)
-            MainFragment.getInstance().setSharedElementEnterTransition(TransitionInflater.from(this).inflateTransition(R.transition.change_image_transform));
-
-
-            ItemDetailFragment.getInstance().setSharedElementReturnTransition(TransitionInflater.from(this).inflateTransition(R.transition.change_image_transform));
             MainFragment.getInstance().setExitTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.fade));
 
             // Create new fragment to add (Fragment B)
             ItemDetailFragment.getInstance().setSharedElementEnterTransition(TransitionInflater.from(this).inflateTransition(R.transition.change_image_transform));
             ItemDetailFragment.getInstance().setEnterTransition(TransitionInflater.from(this).inflateTransition(android.R.transition.fade));
 
+            Bundle bundle = new Bundle();
+            bundle.putString("TRANS_NAME", sharedView.getTransitionName());
+            ItemDetailFragment.getInstance().setArguments(bundle);
+
             // Add Fragment B
-            getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fl_container, ItemDetailFragment.getInstance())
+            FragmentManager fragmentManager = getSupportFragmentManager();
+            fragmentManager.beginTransaction()
+                    .replace(R.id.fl_container, itemDetailFragment)
                     .addToBackStack("Detail")
                     .addSharedElement(sharedView, "image")
                     .commit();
         }else{
             getSupportFragmentManager().beginTransaction()
-                    .replace(R.id.fl_container, ItemDetailFragment.getInstance())
+                    .replace(R.id.fl_container, itemDetailFragment)
                     .addToBackStack("Detail")
                     .commit();
         }
@@ -212,10 +209,5 @@ public class MainActivity extends AppCompatActivity implements MainFragment.OnFr
         } else {
             super.onBackPressed();
         }
-    }
-
-    @Override
-    public void onFragmentInteraction(Uri uri) {
-
     }
 }

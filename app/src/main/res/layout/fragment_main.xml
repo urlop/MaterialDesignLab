@@ -1,9 +1,8 @@
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v7.widget.RecyclerView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.ruby.materiallab.ui.fragments.MainFragment">
-
-    <include layout="@layout/content_list" />
-
-</FrameLayout>
+    tools:context=".ui.MainActivity"
+    tools:showIn="@layout/activity_main"
+    android:id="@+id/rv_list"/>

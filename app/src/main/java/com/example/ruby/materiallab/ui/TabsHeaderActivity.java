@@ -1,8 +1,6 @@
 package com.example.ruby.materiallab.ui;
 
 import android.annotation.SuppressLint;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.design.widget.CollapsingToolbarLayout;
 import android.support.design.widget.TabLayout;
@@ -12,7 +10,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.content.ContextCompat;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.graphics.Palette;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
@@ -22,11 +19,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.FrameLayout;
-import android.widget.ImageView;
-import android.widget.Toast;
 
 import com.example.ruby.materiallab.R;
-import com.example.ruby.materiallab.ui.adapters.SimpleRecyclerAdapter;
+import com.example.ruby.materiallab.ui.adapters.TabContentAdapter;
 import com.example.ruby.materiallab.ui.models.VersionModel;
 
 import java.util.ArrayList;
@@ -133,7 +128,7 @@ public class TabsHeaderActivity extends AppCompatActivity {
 
     public static class DummyFragment extends Fragment {
         int color;
-        SimpleRecyclerAdapter adapter;
+        TabContentAdapter adapter;
 
         public DummyFragment() {
         }
@@ -161,7 +156,7 @@ public class TabsHeaderActivity extends AppCompatActivity {
                 list.add(VersionModel.data[i]);
             }
 
-            adapter = new SimpleRecyclerAdapter(list);
+            adapter = new TabContentAdapter(list);
             recyclerView.setAdapter(adapter);
 
             return view;
