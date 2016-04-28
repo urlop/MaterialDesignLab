@@ -102,7 +102,7 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(intent);
                 break;
             case R.id.action_fragment_transition:
-                intent = new Intent(this, FragmentActivity.class);
+                intent = new Intent(this, TransitionFragmentActivity.class);
                 startActivity(intent);
                 break;
         }

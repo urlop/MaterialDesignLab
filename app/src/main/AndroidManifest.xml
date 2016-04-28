@@ -54,7 +54,7 @@
             android:label="@string/title_activity_tabs"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.FragmentActivity"
+            android:name=".ui.TransitionFragmentActivity"
             android:label="@string/app_name"
             android:parentActivityName=".ui.MainActivity"/>
     </application>

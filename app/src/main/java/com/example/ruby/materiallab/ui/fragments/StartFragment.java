@@ -1,5 +1,7 @@
 package com.example.ruby.materiallab.ui.fragments;
 
+import android.animation.AnimatorInflater;
+import android.animation.AnimatorSet;
 import android.content.Context;
 import android.graphics.drawable.BitmapDrawable;
 import android.os.Build;
@@ -40,6 +42,10 @@ public class StartFragment extends Fragment implements AbsListView.OnItemClickLi
 
         listView.setOnItemClickListener(this);
 
+        AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.image_cross);
+        set.setTarget(view.findViewById(R.id.imageCross));
+        set.start();
+
         return view;
     }
 
@@ -79,7 +85,7 @@ public class StartFragment extends Fragment implements AbsListView.OnItemClickLi
         FragmentManager fragmentManager = getFragmentManager();
         fragmentManager.beginTransaction()
                 .replace(R.id.container, endFragment)
-                .addToBackStack("Payment")
+                .addToBackStack("Fragment2")
                 .addSharedElement(imageView, imageTransitionName)
                 .addSharedElement(textView, textTransitionName)
                 .addSharedElement(staticImage, "imageTransition")

@@ -98,6 +98,14 @@
             android:text="Button 1"
             style="@style/ButtonMain.Round"
             android:layout_margin="@dimen/xsmall_margin" />
+
+        <Button
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:text="Button"
+            android:foreground="?attr/selectableItemBackground"
+            android:background="@drawable/button_round_def_background"
+            android:layout_margin="@dimen/xsmall_margin" />
     </LinearLayout>
 
 </RelativeLayout>

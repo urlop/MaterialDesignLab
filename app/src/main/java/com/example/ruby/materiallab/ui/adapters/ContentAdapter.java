@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.ActivityOptionsCompat;
+import android.support.v4.util.Pair;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -57,7 +58,7 @@ public class ContentAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder
             /*Pair<View, String> p1 = Pair.create((View)iv_image, "image");
             Pair<View, String> p2 = Pair.create((View)tv_title, "title");
             ActivityOptionsCompat options = ActivityOptionsCompat.
-                    makeSceneTransitionAnimation((Activity) context, p1, p2);*/
+                    makeSceneTransitionAnimation((Activity) context, p2, p1);*/
             ActivityOptionsCompat options = ActivityOptionsCompat.
                     makeSceneTransitionAnimation((Activity) context, iv_image, "image");
             context.startActivity(intent, options.toBundle());

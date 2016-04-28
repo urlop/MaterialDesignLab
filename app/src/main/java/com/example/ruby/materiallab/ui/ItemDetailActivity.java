@@ -43,14 +43,13 @@ public class ItemDetailActivity extends AppCompatActivity {
         drawable = (TransitionDrawable) card_image.getDrawable();
 
         if (REVEAL_ANIMATION) {
+            getPalette();
             doReveal();
         }
 
         if(TRANSITION_ANIMATION) {
             doTransition();
         }
-
-        getPalette();
     }
 
     private void doTransition(){
