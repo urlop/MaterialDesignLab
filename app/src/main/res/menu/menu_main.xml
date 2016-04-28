@@ -18,4 +18,9 @@
         android:orderInCategory="100"
         android:title="@string/action_settings"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_fragment_transition"
+        android:orderInCategory="100"
+        android:title="@string/action_fragment_transition"
+        app:showAsAction="never" />
 </menu>

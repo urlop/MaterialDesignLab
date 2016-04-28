@@ -101,6 +101,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, ButtonsActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.action_fragment_transition:
+                intent = new Intent(this, FragmentActivity.class);
+                startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }

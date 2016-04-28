@@ -91,6 +91,7 @@
     </string>
     <string name="action_buttons">Button</string>
     <string name="action_tab_header">Tab Header</string>
+    <string name="action_fragment_transition">Frag Transition</string>
     <string name="action_settings">Settings</string>
 
     <!-- Login -->
