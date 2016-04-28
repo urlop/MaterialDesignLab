@@ -25,7 +25,7 @@ public class TabContentAdapter extends RecyclerView.Adapter<TabContentAdapter.Ve
 
     @Override
     public void onBindViewHolder(VersionViewHolder versionViewHolder, int i) {
-        versionViewHolder.tv_title.setText(items.get(i));
+        //versionViewHolder.tv_title.setText(items.get(i));
     }
 
     @Override

@@ -93,7 +93,11 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, SettingsActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.action_favorite:
+            case R.id.action_tab_header:
+                intent = new Intent(this, TabsHeaderActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.action_buttons:
                 intent = new Intent(this, ButtonsActivity.class);
                 startActivity(intent);
                 break;

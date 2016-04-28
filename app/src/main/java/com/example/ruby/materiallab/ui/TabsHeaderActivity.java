@@ -47,9 +47,10 @@ public class TabsHeaderActivity extends AppCompatActivity {
         final Toolbar toolbar = (Toolbar) findViewById(R.id.htab_toolbar);
         setSupportActionBar(toolbar);
 
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+
         final ViewPager viewPager = (ViewPager) findViewById(R.id.htab_viewpager);
         setupViewPager(viewPager);
-
 
         TabLayout tabLayout = (TabLayout) findViewById(R.id.htab_tabs);
         tabLayout.setupWithViewPager(viewPager);

@@ -89,7 +89,8 @@
         "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
         "when a user tries to pick up one of cards.\n\n"
     </string>
-    <string name="action_favorite">Favorites</string>
+    <string name="action_buttons">Button</string>
+    <string name="action_tab_header">Tab Header</string>
     <string name="action_settings">Settings</string>
 
     <!-- Login -->
