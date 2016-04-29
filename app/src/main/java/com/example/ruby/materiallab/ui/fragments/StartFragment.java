@@ -3,7 +3,9 @@ package com.example.ruby.materiallab.ui.fragments;
 import android.animation.AnimatorInflater;
 import android.animation.AnimatorSet;
 import android.content.Context;
+import android.graphics.drawable.Animatable;
 import android.graphics.drawable.BitmapDrawable;
+import android.graphics.drawable.Drawable;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -23,6 +25,10 @@ import com.example.ruby.materiallab.R;
 
 import java.util.Random;
 
+/**
+ * Initial Fragment for TransitionFragmentActivity.
+ * https://bitbucket.org/StylingAndroid/vectordrawables/src/72974e61d13cb704a8f3fd5c506de25711b87737/app/src/main/java/com/stylingandroid/vectordrawables/ImageFragment.java?at=Part4&fileviewer=file-view-default
+ */
 public class StartFragment extends Fragment implements AbsListView.OnItemClickListener {
 
     @Override
@@ -42,11 +48,26 @@ public class StartFragment extends Fragment implements AbsListView.OnItemClickLi
 
         listView.setOnItemClickListener(this);
 
-        AnimatorSet set = (AnimatorSet) AnimatorInflater.loadAnimator(getContext(), R.animator.image_cross);
-        set.setTarget(view.findViewById(R.id.imageCross));
-        set.start();
+        final ImageView imageView = (ImageView) view.findViewById(R.id.imageCross);
+        imageView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startAnimation(imageView);
+            }
+        });
 
         return view;
+    }
+
+    /**
+     * Starts animation when on click
+     * @param imageView
+     */
+    private void startAnimation(ImageView imageView) {
+        Drawable drawable = imageView.getDrawable();
+        if (drawable != null && drawable instanceof Animatable) {
+            ((Animatable) drawable).start();
+        }
     }
 
     @Override

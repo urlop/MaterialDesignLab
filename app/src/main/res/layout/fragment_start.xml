@@ -15,7 +15,7 @@
         android:id="@+id/imageCross"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:src="@drawable/vector_square"
+        android:src="@drawable/animated_square"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
