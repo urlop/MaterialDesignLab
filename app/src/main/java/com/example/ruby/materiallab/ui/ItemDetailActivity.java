@@ -37,7 +37,6 @@ public class ItemDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_detail);
-
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         card_image = (ImageView) findViewById(R.id.card_image);
@@ -114,11 +113,11 @@ public class ItemDetailActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // handle arrow click here
-        if (item.getItemId() == android.R.id.home) {
-            onBackPressed();
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
         }
-
         return super.onOptionsItemSelected(item);
     }
 }

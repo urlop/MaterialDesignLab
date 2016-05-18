@@ -2,6 +2,7 @@ package com.example.ruby.materiallab.ui;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
@@ -23,6 +24,7 @@ public class ButtonsActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_buttons);
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         setupView();
     }
@@ -68,5 +70,15 @@ public class ButtonsActivity extends AppCompatActivity {
                 bt_borderless.setSelected(true);
                 break;
         }
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 }
