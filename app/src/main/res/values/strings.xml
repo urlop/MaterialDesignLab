@@ -92,6 +92,7 @@
     <string name="action_buttons">Button</string>
     <string name="action_tab_header">Tab Header</string>
     <string name="action_fragment_transition">Frag Transition</string>
+    <string name="action_navigation_drawer">Navigation Drawer</string>
     <string name="action_settings">Settings</string>
 
     <!-- Login -->
@@ -111,6 +112,7 @@
     <!-- Settings -->
     <string name="title_activity_settings">Settings</string>
     <string name="st_prompt_username">Username</string>
+    <string name="st_prompt_name">Name</string>
     <string name="st_prompt_password">New Password</string>
     <string name="st_prompt_gender">Gender</string>
     <string name="st_notifications">Notifications</string>
@@ -195,7 +197,7 @@
 
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
-    <string name="title_activity_tabs">TabsActivity</string>
+    <string name="title_activity_tabs">Tabs Activity</string>
     <string name="section_format">Hello World from section: %1$d</string>
 
 
@@ -224,5 +226,11 @@
         <item>Colored list icons with Bottom Sheets Google Maps style</item>
         <item>Google style product tour</item>
     </string-array>
+
+
+    <string name="title_activity_drawer">Drawer Activity</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
 
 </resources>

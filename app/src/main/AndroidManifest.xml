@@ -20,19 +20,15 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".ui.SettingsActivity"
-            android:label="@string/title_activity_settings"
-            android:parentActivityName=".ui.MainActivity" />
+            android:label="@string/title_activity_settings" />
         <activity
             android:name=".ui.LoginActivity"
-            android:label="@string/title_activity_login"></activity>
+            android:label="@string/title_activity_login" />
         <activity
             android:name=".ui.TestSettingsActivity"
             android:label="@string/title_activity_test_settings" />
-        <activity
-            android:name=".ui.ButtonsActivity"
-            android:parentActivityName=".ui.SettingsActivity" />
-        <activity
-            android:name=".ui.ItemDetailActivity"/>
+        <activity android:name=".ui.ButtonsActivity" />
+        <activity android:name=".ui.ItemDetailActivity" />
         <activity
             android:name=".ui.SplashActivity"
             android:label="@string/app_name"
@@ -54,7 +50,11 @@
         <activity
             android:name=".ui.TransitionFragmentActivity"
             android:label="@string/app_name"
-            android:parentActivityName=".ui.MainActivity"/>
+            android:parentActivityName=".ui.MainActivity" />
+        <activity
+            android:name=".ui.DrawerActivity"
+            android:label="@string/title_activity_drawer"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

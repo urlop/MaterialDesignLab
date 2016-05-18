@@ -23,4 +23,9 @@
         android:orderInCategory="100"
         android:title="@string/action_fragment_transition"
         app:showAsAction="never" />
+    <item
+        android:id="@+id/action_navigation_drawer"
+        android:orderInCategory="100"
+        android:title="@string/action_navigation_drawer"
+        app:showAsAction="never" />
 </menu>

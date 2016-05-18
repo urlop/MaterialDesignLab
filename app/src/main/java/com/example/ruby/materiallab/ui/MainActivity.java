@@ -105,6 +105,10 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, TransitionFragmentActivity.class);
                 startActivity(intent);
                 break;
+            case R.id.action_navigation_drawer:
+                intent = new Intent(this, DrawerActivity.class);
+                startActivity(intent);
+                break;
         }
         return super.onOptionsItemSelected(item);
     }
