@@ -91,7 +91,7 @@ public class ItemDetailActivity extends AppCompatActivity {
         Palette.PaletteAsyncListener paletteListener = new Palette.PaletteAsyncListener() {
             public void onGenerated(Palette palette) {
                 int defaultColor = 0x000000;
-                v_background.setBackgroundColor(palette.getVibrantColor(palette.getVibrantColor(defaultColor)));
+                v_background.setBackgroundColor(palette.getVibrantColor(defaultColor));
             }
         };
 

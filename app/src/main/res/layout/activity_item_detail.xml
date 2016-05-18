@@ -40,20 +40,21 @@
                 android:layout_height="wrap_content">
 
                 <com.example.ruby.materiallab.utils.ShapeImageView
+                    android:transitionName="image"
                     android:id="@+id/iv_shape_image"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:src="@drawable/kitten_2"
                     app:siShape="@raw/imgview_heart"
-                    android:visibility="gone"/>
+                    android:visibility="visible"/>
 
                 <ImageView
-                    android:transitionName="image"
                     android:id="@+id/card_image"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/transition"
+                    android:visibility="gone"
                     />
 
                 <TextView
