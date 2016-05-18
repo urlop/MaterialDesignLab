@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.graphics.Palette;
 import android.transition.Transition;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 
@@ -36,6 +37,8 @@ public class ItemDetailActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_item_detail);
+
+        getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
         card_image = (ImageView) findViewById(R.id.card_image);
         iv_shape_image = (ImageView) findViewById(R.id.iv_shape_image);
@@ -72,7 +75,7 @@ public class ItemDetailActivity extends AppCompatActivity {
                 public void onTransitionCancel(Transition transition) {
 
                 }
-
+ // close this activity and return to preview activity (if there is any)
                 @Override
                 public void onTransitionPause(Transition transition) {
 
@@ -95,7 +98,7 @@ public class ItemDetailActivity extends AppCompatActivity {
             }
         };
 
-        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.kitten_2);
+        Bitmap myBitmap = BitmapFactory.decodeResource(getResources(), R.drawable.place_des_vosges);
         if (myBitmap != null && !myBitmap.isRecycled()) {
             Palette.from(myBitmap).generate(paletteListener);
         }
@@ -107,5 +110,15 @@ public class ItemDetailActivity extends AppCompatActivity {
             UIHelper.exitReveal(v_background);
         }
         super.onBackPressed();
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // handle arrow click here
+        if (item.getItemId() == android.R.id.home) {
+            onBackPressed();
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

@@ -25,7 +25,7 @@
                 android:layout_height="fill_parent"
                 android:alpha="0.5"
                 android:scaleType="centerCrop"
-                android:src="@drawable/kitten_2_inverse" />
+                android:src="@drawable/place_massena_by_night" />
 
             <android.support.v7.widget.Toolbar
                 android:id="@+id/toolbar"

@@ -25,7 +25,7 @@
 
             <ImageView
                 android:id="@+id/htab_header"
-                android:background="@drawable/kitten_2_inverse"
+                android:background="@drawable/place_massena_by_night"
                 android:fitsSystemWindows="true"
                 android:layout_width="fill_parent"
                 android:layout_height="fill_parent"
