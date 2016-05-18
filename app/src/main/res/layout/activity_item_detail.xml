@@ -33,35 +33,35 @@
                 android:layout_marginStart="@dimen/xsmall_margin"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                android:text="Gatitoo!!"/>
+                android:text="Place"/>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
 
                 <com.example.ruby.materiallab.utils.ShapeImageView
-                    android:transitionName="image"
                     android:id="@+id/iv_shape_image"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
-                    android:src="@drawable/kitten_2"
+                    android:src="@drawable/place_des_vosges"
                     app:siShape="@raw/imgview_heart"
-                    android:visibility="visible"/>
+                    android:visibility="gone"/>
 
                 <ImageView
+                    android:transitionName="image"
                     android:id="@+id/card_image"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
                     android:scaleType="centerCrop"
                     android:src="@drawable/transition"
-                    android:visibility="gone"
+                    android:visibility="visible"
                     />
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:padding="@dimen/text_margin"
-                    android:text="Gender: Female \nCuteness: Over 9000! \nFavorite Food: You \nFavorite Toy: You \nSlave: You"/>
+                    android:text="Length	140 m (460 ft)\nWidth:	140 m (460 ft)\nFrom:	rue de Birague, 11 bis\nTo:	rue de Béarn, 1\nConstruction Completion:	July 1605"/>
             </LinearLayout>
 
             <TextView

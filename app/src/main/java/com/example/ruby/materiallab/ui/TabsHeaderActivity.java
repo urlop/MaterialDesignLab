@@ -78,17 +78,10 @@ public class TabsHeaderActivity extends AppCompatActivity {
 
     private void setupViewPager(ViewPager viewPager) {
         ViewPagerAdapter adapter = new ViewPagerAdapter(getSupportFragmentManager());
-        adapter.addFrag(new DummyFragment(ContextCompat.getColor(this, R.color.colorAccentDark)), "CAT");
-        adapter.addFrag(new DummyFragment(ContextCompat.getColor(this, R.color.purple)), "DOG");
-        adapter.addFrag(new DummyFragment(ContextCompat.getColor(this, R.color.grey)), "MOUSE");
+        adapter.addFrag(new DummyFragment(ContextCompat.getColor(this, R.color.colorAccentDark)), "TAB1");
+        adapter.addFrag(new DummyFragment(ContextCompat.getColor(this, R.color.purple)), "TAB2");
+        adapter.addFrag(new DummyFragment(ContextCompat.getColor(this, R.color.grey)), "TAB3");
         viewPager.setAdapter(adapter);
-    }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
     }
 
     @Override

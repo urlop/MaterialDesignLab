@@ -27,7 +27,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="fitXY"
-                android:src="@drawable/kitten_2" />
+                android:src="@drawable/place_des_vosges" />
             <TextView
                 android:transitionName="title"
                 android:id="@+id/tv_title"
@@ -37,7 +37,7 @@
                 android:layout_marginStart="@dimen/xsmall_margin"
                 android:textStyle="bold"
                 android:textAppearance="@style/TextAppearance.AppCompat.Large.Inverse"
-                android:text="Gatitoo!!"/>
+                android:text="Place"/>
 
             <Button
                 android:id="@+id/action_button"
